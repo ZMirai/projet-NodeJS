@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>En manque d'idée ? Laissez nous vous aider</h2>
+            <p>Cliquez sur le bouton ci-dessous pour afficher un titre au hasard parmit notre site</p>
+            <button class="btn">Go !</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-top">
+                    <img src="/" alt="">
+                </div>
+                <div class="card-top">
+                    <h3>Titre</h3>
+                    <p>descrption</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const axios = require('axios');
+    
+    document.getElementById('randomize').addEventListener('click', function() {
+        axios.get('https://kitsu.io/api/edge/manga-characters')
+            .then(function (response) {
+                document.getElementById('result').innerHTML = response.data;
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+    });
+</script>

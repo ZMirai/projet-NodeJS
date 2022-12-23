@@ -1,0 +1,19 @@
+<div class="row teaser-card ">
+    {{#each Mangas}}
+    <div class="col card-horizontal-list flex-column justify-content-around text-center">
+
+        <div class="card-body-teaser">
+             <img class="card-img-top" src="{{this.attributes.posterImage.medium}}" alt="couverture de {{this.attributes.canonicalTitle}}">
+            <h5>{{this.attributes.canonicalTitle}}</h5>
+        </div>
+        <div class="card-hidden">
+            <p class="teaser-description">
+                
+            </p>
+        </div>
+        <div class="card-description-teaser">
+            <button class="teaser-btn">Voir description</button>
+        </div>
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,51 @@
+<div class="container">
+    <h2 id="top-10-anime">TOP 10 des animes</h2>
+    <div class="row">
+        {{#each animes}}
+
+        <div class="col-md-3 my-1">
+            <div id="card" class="card">
+                <div class="card-image">
+                    <img src="{{this.attributes.posterImage.medium}}" alt="couverture de {{this.attributes.canonicalTitle}}">
+                </div>
+                <div class="card-text">
+                    <span class="date">{{this.attributes.titles.ja_jp}}</span>
+                    <h2>{{this.attributes.canonicalTitle}}</h2>
+                    <p class="description">{{trimString this.attributes.synopsis 100}}</p>
+                    
+                </div>
+                <div class="card-stats">
+                    <div class="stat">
+                    <div class="value">{{this.attributes.popularityRank}}<sup>ème</sup></div>
+                    <div class="type">Rang</div>
+                    </div>
+                    <div class="stat border">
+                    <div class="value">{{this.attributes.ratingRank}}</div>
+                    <div class="type">votes</div>
+                    </div>
+                    <div class="stat">
+                    <div class="value">{{this.attributes.averageRating}}</div>
+                    <div class="type">Note/100</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{/each}}
+    </div>
+    <div class="row">
+        {{> new-card }}
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+
+    
+Handlebars.registerHelper('trimString', function(passedString) {
+        var theString = passedString.substring(0, 100);
+        return new Handlebars.SafeString(theString)
+     });
+
+</script>

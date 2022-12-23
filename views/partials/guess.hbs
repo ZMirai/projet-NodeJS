@@ -1,0 +1,33 @@
+<!-- composant de test funcion onclick -->
+
+
+<div class="container my-5">
+            <div class="row bg-secondary py-5">
+                <form id="search_form" class="col s12 text-white" method="GET">
+                    <h2>Rechercher une référence</h2>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <p class="element"></p>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+<div id="search-results" class="container my-5">
+    
+</div>
+
+<script>
+    const axios = require('axios');
+    
+    document.getElementById('randomize').addEventListener('click', function() {
+        axios.get('https://kitsu.io/api/edge/manga-characters')
+            .then(function (response) {
+                document.getElementById('result').innerHTML = response.data;
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+    });
+</script>

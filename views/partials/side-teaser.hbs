@@ -1,0 +1,12 @@
+<div class="side-teaser">
+    {{#each Character}}
+    <div class="card-ST text-center">
+        <img class="card-img-top-ST" src="{{this.attributes.image.original}}" alt="Card image {{this.attributes.name}}">
+        <div class="card-body-ST">
+            <h4 class="card-title-ST">{{this.attributes.name}}</h4>
+            <p class="card-title-description">{{this.attributes.name}}</p>
+            <p></p>
+        </div>
+    </div>
+    {{/each}}
+</div>

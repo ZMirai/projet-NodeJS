@@ -1,0 +1,17 @@
+<div class="row teaser-card">
+    {{#each Animes}}
+    <div class="col card-horizontal-list d-flex flex-column">
+        <div class="card-body-teaser">
+            <img src="{{this.attributes.posterImage.medium}}" alt="couverture de {{this.attributes.canonicalTitle}}">
+            <h5>{{this.attributes.canonicalTitle}}</h5>
+        </div>
+        <div class="card-hidden">
+            <p class="teaser-description"></p>
+        </div>
+        <div class="card-description-teaser">
+            <button class="teaser-btn">Voir description</button>
+        </div>
+    </div>
+    {{/each}}
+</div>
+

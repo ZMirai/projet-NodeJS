@@ -1,0 +1,26 @@
+<div class="col-md-3 my-1">
+                            <div id="card" class="card">
+                                <div class="card-image">
+                                    <img src="{{this.attributes.posterImage.tiny}}" alt="couverture de {{this.attributes.canonicalTitle}}">
+                                </div>
+                                <div class="card-text">
+                                    <span class="date">{{this.attributes.slug}}</span>
+                                    <h2>{{this.attributes.canonicalTitle}}</h2>
+                                    <p>{{this.attributes.synopsis}}</p>
+                                </div>
+                                <div class="card-stats">
+                                    <div class="stat">
+                                    <div class="value">{{this.attributes.popularityRank}}<sup>ème</sup></div>
+                                    <div class="type">Rang</div>
+                                    </div>
+                                    <div class="stat border">
+                                    <div class="value">{{this.attributes.ratingRank}}</div>
+                                    <div class="type">votes</div>
+                                    </div>
+                                    <div class="stat">
+                                    <div class="value">{{this.attributes.seasonNumber}}</div>
+                                    <div class="type">saisons</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
